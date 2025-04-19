@@ -4,7 +4,7 @@ function do_push() {
     git commit -m "update"
     export http_proxy=http://192.168.48.17:18000; export https_proxy=http://192.168.48.17:18000
     while true; do
-        GIT_ASKPASS=/bin/echo GIT_TERMINAL_PROMPT=0 git push -f origin main
+        git push -f origin main
         if [ $? -eq 0 ]; then
             echo "Push successful!"
             break
